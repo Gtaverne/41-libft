@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:34:54 by user42            #+#    #+#             */
-/*   Updated: 2020/11/19 16:06:34 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/19 16:26:55 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 		return ;
 	if (*alst)
 	{
-		end = ft_lstlast(*head);
+		end = ft_lstlast(*alst);
 		end->next = new;
 	}
 	else

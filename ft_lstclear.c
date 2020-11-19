@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:45:21 by user42            #+#    #+#             */
-/*   Updated: 2020/11/19 15:48:15 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/19 16:29:43 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	while (lst)
+	while (*lst)
 	{
 		tmp = (*lst)->next;
 		del((*lst)->content);
 		free(*lst);
-		lst = tmp;
+		*lst = tmp;
 	}
 }
