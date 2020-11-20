@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:46:45 by user42            #+#    #+#             */
-/*   Updated: 2020/11/17 17:01:40 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/20 12:07:57 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int		i;
-	int		r;
-	int		s;
+	long long int		i;
+	long long int		r;
+	long long int		s;
 
 	i = 0;
 	r = 0;

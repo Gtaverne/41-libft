@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 10:15:43 by user42            #+#    #+#             */
-/*   Updated: 2020/11/19 10:23:53 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/20 12:40:03 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	unsigned int	end;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
 	while (ft_isincharset(s1[start], set))
