@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 10:15:43 by user42            #+#    #+#             */
-/*   Updated: 2020/11/20 12:40:03 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/20 14:44:49 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,13 @@ char		*ft_strtrim(char const *s1, char const *set)
 	unsigned int	end;
 
 	i = 0;
-	if (!s1)
-		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
-	while (ft_isincharset(s1[start], set))
+	while (ft_isincharset(s1[start], set) && start < end)
 		start++;
-	while (ft_isincharset(s1[end - 1], set))
+	while (ft_isincharset(s1[end - 1], set) && start < end)
 		end--;
-	res = ft_calloc((start < end ? end - start : 0) + 1, sizeof(char));
+	res = malloc((end - start + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
 	while (i < end - start)
@@ -52,5 +50,16 @@ char		*ft_strtrim(char const *s1, char const *set)
 		res[i] = s1[start + i];
 		i++;
 	}
+	res[i] = '\0';
 	return (res);
+}
+
+int main (int argc, char **argv)
+{
+	if (argc != 3)
+		printf ("D'abord S1, puis set\n");
+	char *res;
+
+	res = ft_strtrim(argv[1], argv[2]);
+	printf("%s\n", res);
 }
