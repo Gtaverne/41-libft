@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:12:03 by user42            #+#    #+#             */
-/*   Updated: 2020/11/17 16:54:37 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/20 14:51:02 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	unsigned int result;
 	unsigned int i;
 
+	if (!src)
+		return (0);
 	result = ft_strlen(src);
 	if (size > 0)
 	{
