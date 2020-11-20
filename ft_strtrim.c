@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 10:15:43 by user42            #+#    #+#             */
-/*   Updated: 2020/11/20 14:58:06 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/20 15:16:29 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = 0;
 	end = ft_strlen(s1);
+	if (!s1[0])
+		return ("");
 	while (ft_isincharset(s1[start], set) && start < end)
 		start++;
 	while (ft_isincharset(s1[end - 1], set) && start < end)
